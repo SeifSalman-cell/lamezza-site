@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Mezza - Bar à jeux & Glacier à Lyon 1</title>
+  <meta name="description" content="La Mezza, bar à jeux, glacier et restauration à Lyon 1. Plus de 100 jeux de société, fléchettes professionnelles, glaces, planches, sandwichs, bières et vins." />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #fbf4ea; color: #2a211c; line-height: 1.7; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: rgba(25,18,14,.92); backdrop-filter: blur(10px); padding: 16px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid rgba(255,214,151,.25); }
+    nav h1 { color: #f6c16b; font-size: 28px; letter-spacing: 2px; text-transform: uppercase; }
+    nav a { color: white; text-decoration: none; margin-left: 22px; font-weight: 600; font-size: 15px; transition: .3s; }
+    nav a:hover { color: #f6c16b; }
+    header { min-height: 100vh; background: linear-gradient(120deg, rgba(22,15,10,.86), rgba(77,39,18,.56)), url('bar.jpg'); background-size: cover; background-position: center; color: white; display: flex; align-items: center; padding: 120px 8% 60px; }
+    .hero-content { max-width: 780px; animation: fadeInUp 1.1s ease; }
+    .tagline { color: #f6c16b; text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: bold; margin-bottom: 15px; }
+    header h2 { font-size: clamp(48px, 8vw, 92px); line-height: 1; margin-bottom: 24px; font-family: Georgia, serif; }
+    header p { font-size: 22px; max-width: 720px; margin-bottom: 34px; color: #fff3df; }
+    .btn { display: inline-block; background: linear-gradient(135deg, #d28a35, #f6c16b); color: #21150f; padding: 15px 30px; border-radius: 40px; text-decoration: none; font-weight: 800; margin: 8px 8px 8px 0; box-shadow: 0 12px 30px rgba(0,0,0,.25); transition: .3s; }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+    .btn-outline { background: transparent; color: white; border: 1px solid #f6c16b; }
+    section { padding: 90px 8%; }
+    .section-title { text-align: center; margin-bottom: 18px; color: #8a431d; font-size: 42px; font-family: Georgia, serif; }
+    .section-subtitle { text-align: center; max-width: 860px; margin: auto; color: #5b4a3f; font-size: 19px; }
+    .highlight-box { margin-top: -70px; position: relative; z-index: 10; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; padding: 0 8%; }
+    .highlight { background: rgba(255,255,255,.94); padding: 30px; border-radius: 24px; box-shadow: 0 20px 45px rgba(0,0,0,.12); text-align: center; transition: .3s; border: 1px solid rgba(210,138,53,.18); }
+    .highlight:hover { transform: translateY(-8px); }
+    .highlight strong { display: block; color: #8a431d; font-size: 34px; margin-bottom: 6px; font-family: Georgia, serif; }
+    .cards, .menu-list, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 26px; margin-top: 45px; }
+    .card, .menu-item { background: white; border-radius: 26px; overflow: hidden; box-shadow: 0 16px 38px rgba(60,35,20,.1); transition: .35s; border: 1px solid rgba(138,67,29,.08); }
+    .card:hover, .menu-item:hover { transform: translateY(-8px); box-shadow: 0 24px 55px rgba(60,35,20,.18); }
+    .card img { width: 100%; height: 230px; object-fit: cover; background: #ead8c2; }
+    .card-content, .menu-item { padding: 28px; }
+    .card-content h3, .menu-item h3 { color: #8a431d; margin-bottom: 10px; font-size: 24px; font-family: Georgia, serif; }
+    .dark-section { background: #21150f; color: #fff3df; }
+    .dark-section .section-title { color: #f6c16b; }
+    .dark-section .section-subtitle { color: #e7d4bd; }
+    .gallery img { width: 100%; height: 260px; object-fit: cover; border-radius: 24px; background: #ead8c2; transition: .35s; box-shadow: 0 16px 38px rgba(60,35,20,.12); }
+    .gallery img:hover { transform: scale(1.04); }
+    .contact { background: linear-gradient(rgba(33,21,15,.93), rgba(33,21,15,.93)), url('contact.jpg'); background-size: cover; background-position: center; color: white; text-align: center; }
+    .contact .section-title { color: #f6c16b; }
+    .contact-card { max-width: 760px; margin: 35px auto 0; background: rgba(255,255,255,.08); border: 1px solid rgba(246,193,107,.25); border-radius: 28px; padding: 36px; backdrop-filter: blur(8px); }
+    .contact-card p { margin: 13px 0; font-size: 19px; }
+    .contact-card a { color: #f6c16b; text-decoration: none; font-weight: bold; }
+    footer { background: #120c09; color: #fff3df; text-align: center; padding: 24px; font-size: 14px; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 850px) { nav { flex-direction: column; padding: 14px 5%; } nav div { margin-top: 10px; text-align: center; } nav a { margin: 0 7px; font-size: 13px; } header { text-align: center; padding-top: 150px; } .hero-content { margin: auto; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>La Mezza</h1>
+    <div>
+      <a href="#concept">Concept</a>
+      <a href="#jeux">Jeux</a>
+      <a href="#menu">Menu</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <div class="tagline">Bar à jeux • Glacier • Restauration</div>
+      <h2>La Mezza</h2>
+      <p>Un lieu chic et convivial au cœur de Lyon 1 pour jouer, partager, déguster et profiter d’un vrai moment entre amis.</p>
+      <a href="#jeux" class="btn">Découvrir les jeux</a>
+      <a href="tel:+33688793133" class="btn btn-outline">Appeler maintenant</a>
+    </div>
+  </header>
+
+  <div class="highlight-box">
+    <div class="highlight"><strong>100+</strong>Jeux de société</div>
+    <div class="highlight"><strong>Pro</strong>Fléchettes professionnelles</div>
+    <div class="highlight"><strong>Lyon 1</strong>19 rue Terme</div>
+  </div>
+
+  <section id="concept">
+    <h2 class="section-title">Bienvenue à La Mezza</h2>
+    <p class="section-subtitle">La Mezza est un bar à jeux, glacier et espace de restauration situé à Lyon 1. Ici, on vient pour jouer, rire, boire un verre, manger une bonne planche, goûter une glace ou simplement passer un moment chaleureux dans une ambiance élégante et conviviale.</p>
+  </section>
+
+  <section id="jeux" class="dark-section">
+    <h2 class="section-title">Jeux & animations</h2>
+    <p class="section-subtitle">Avec plus de 100 jeux de société, des jeux d’ambiance, des jeux familiaux, des jeux de stratégie et des fléchettes professionnelles, La Mezza est l’adresse parfaite pour une soirée originale à Lyon.</p>
+    <div class="cards">
+      <div class="card"><img src="jeu1.jpg" alt="Jeux de société à La Mezza" /><div class="card-content"><h3>Plus de 100 jeux</h3><p>Une grande sélection de jeux de société pour tous les goûts : stratégie, cartes, ambiance, famille et découverte.</p></div></div>
+      <div class="card"><img src="flechettes.jpg" alt="Jeux de fléchettes professionnelles" /><div class="card-content"><h3>Fléchettes pro</h3><p>Profitez d’un espace fléchettes professionnel pour défier vos amis dans une ambiance festive.</p></div></div>
+      <div class="card"><img src="soiree.jpg" alt="Soirée jeux entre amis" /><div class="card-content"><h3>Soirées conviviales</h3><p>Un lieu idéal pour les sorties entre amis, les anniversaires, les afterworks ou les moments en famille.</p></div></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">À manger & à boire</h2>
+    <p class="section-subtitle">Des produits gourmands à partager autour d’un jeu ou d’un verre.</p>
+    <div class="menu-list">
+      <div class="menu-item"><h3>Glaces</h3><p>Des glaces gourmandes et rafraîchissantes pour une pause sucrée.</p></div>
+      <div class="menu-item"><h3>Planches fromage & charcuterie</h3><p>Des planches généreuses à partager, parfaites avec un verre de vin ou une bière.</p></div>
+      <div class="menu-item"><h3>Sandwichs</h3><p>Des sandwichs savoureux, préparés avec soin pour une pause rapide et gourmande.</p></div>
+      <div class="menu-item"><h3>Plats maison</h3><p>De bons plats généreux, faits pour se régaler dans une ambiance détendue.</p></div>
+      <div class="menu-item"><h3>Bières</h3><p>Une sélection de bières à déguster pendant vos parties.</p></div>
+      <div class="menu-item"><h3>Vins</h3><p>Des vins pour accompagner les planches, les plats et les soirées entre amis.</p></div>
+    </div>
+  </section>
+
+  <section id="photos" class="dark-section">
+    <h2 class="section-title">Galerie photos</h2>
+    <p class="section-subtitle">Ajoute ici les photos de ton bar, des jeux, des glaces, des plats, des planches et des boissons.</p>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Photo du bar La Mezza" />
+      <img src="photo2.jpg" alt="Photo des plats" />
+      <img src="photo3.jpg" alt="Photo des glaces" />
+      <img src="photo4.jpg" alt="Photo des jeux" />
+      <img src="photo5.jpg" alt="Photo des planches" />
+      <img src="photo6.jpg" alt="Photo des boissons" />
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Nous trouver</h2>
+    <p class="section-subtitle">Venez découvrir La Mezza au cœur de Lyon 1.</p>
+    <div class="contact-card">
+      <p><strong>La Mezza</strong></p>
+      <p>Bar à jeux • Glacier • Restauration</p>
+      <p>📍 19 rue Terme, 69001 Lyon</p>
+      <p>📞 <a href="tel:+33688793133">+33 6 88 79 31 33</a></p>
+      <p>🌐 lamezza.net</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=19+rue+Terme+69001+Lyon" target="_blank">Ouvrir sur Google Maps</a>
+    </div>
+  </section>
+
+  <footer><p>© 2026 La Mezza — Bar à jeux, glacier et restauration à Lyon 1</p></footer>
+</body>
+</html>
