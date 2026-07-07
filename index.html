@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chez Mestar | Restaurant & Traiteur Libanais à Lyon</title>
+<title>La Mezza | Restaurant & Traiteur Libanais à Lyon</title>
 
 <style>
 *{box-sizing:border-box}
 
 :root{
   --blue:#005387;
-  --blue-dark:#05324f;
+  --blue-dark:#042b45;
   --gold:#c99a45;
   --white:#fff;
-  --soft:#f4efe7;
   --card:rgba(255,255,255,.08);
   --border:rgba(255,255,255,.16);
   --shadow:0 18px 45px rgba(0,0,0,.25);
@@ -37,9 +36,9 @@ body{
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(0,0,0,.22);
+  background:rgba(0,0,0,.25);
   backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(201,154,69,.25);
+  border-bottom:1px solid rgba(201,154,69,.3);
 }
 
 .topbar-inner{
@@ -53,7 +52,7 @@ body{
 .logo h1{
   margin:0;
   color:var(--gold);
-  font-size:38px;
+  font-size:42px;
 }
 
 .logo p{
@@ -64,8 +63,7 @@ body{
 .nav{
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
-  justify-content:center;
+  gap:14px;
 }
 
 .nav a{
@@ -275,9 +273,14 @@ body{
   box-shadow:var(--shadow);
 }
 
-.cta{
+.contact-box{
   text-align:center;
-  margin:45px 0;
+  margin:45px auto;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:35px;
+  box-shadow:var(--shadow);
 }
 
 footer{
@@ -297,21 +300,15 @@ footer{
   }
 
   .topbar-inner{
-    align-items:center;
     text-align:center;
   }
 
   .nav{
-    margin-top:10px;
-  }
-
-  .hero{
-    padding:25px 0;
+    justify-content:center;
   }
 
   .hero-text{
     padding:24px;
-    border-radius:24px;
   }
 
   .hero-text h2{
@@ -337,11 +334,6 @@ footer{
 
   .card-section{
     padding:20px;
-    border-radius:24px;
-  }
-
-  .card-section h4{
-    font-size:26px;
   }
 
   .events img,.gallery-grid img{
@@ -378,8 +370,8 @@ footer{
 <header class="topbar">
   <div class="container topbar-inner">
     <div class="logo">
-      <h1>Chez Mestar</h1>
-      <p>Restaurant & traiteur libanais à Lyon</p>
+      <h1>La Mezza</h1>
+      <p>Restaurant & traiteur libanais à Lyon 1</p>
     </div>
 
     <nav class="nav">
@@ -394,25 +386,25 @@ footer{
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="badge">Cuisine maison • Produits frais</span>
-      <h2>Saveurs libanaises, salle privatisable et événements sur mesure.</h2>
+      <span class="badge">Cuisine maison • Produits frais • Événements</span>
+      <h2>Saveurs libanaises, traiteur et salle privatisable à Lyon.</h2>
       <p>
-        Chez Mestar vous accueille à la Croix-Rousse pour découvrir une cuisine
-        libanaise authentique, généreuse et préparée maison. Nous accompagnons
-        aussi vos anniversaires, team buildings, séminaires et événements privés.
+        La Mezza vous accueille au 19 rue Terme, Lyon 1, pour une cuisine libanaise
+        authentique, généreuse et faite maison. Nous organisons aussi vos anniversaires,
+        team buildings, séminaires et événements privés.
       </p>
 
       <div class="buttons">
         <a href="#menu" class="btn btn-gold">Voir le menu</a>
         <a href="#salle" class="btn btn-light">Privatiser la salle</a>
-        <a href="tel:0961223265" class="btn btn-light">Appeler</a>
+        <a href="tel:0783704499" class="btn btn-light">Appeler</a>
       </div>
     </div>
 
     <div class="hero-images">
-      <img src="photo-hero.jpg" class="large" alt="Cuisine libanaise Chez Mestar">
+      <img src="photo-hero.jpg" class="large" alt="Cuisine libanaise La Mezza">
       <img src="photo-plat-1.jpg" alt="Plat libanais">
-      <img src="photo-salle-1.jpg" alt="Salle Chez Mestar">
+      <img src="photo-salle-1.jpg" alt="Salle La Mezza">
     </div>
   </div>
 </section>
@@ -488,10 +480,10 @@ footer{
   </div>
 
   <div class="events">
-    <img src="photo-salle-2.jpg" alt="Salle privatisable Chez Mestar">
+    <img src="photo-salle-2.jpg" alt="Salle privatisable La Mezza">
 
     <div>
-      <h3 style="color:var(--gold);font-size:36px;margin-top:0;">Organisez votre événement chez Chez Mestar</h3>
+      <h3 style="color:var(--gold);font-size:36px;margin-top:0;">Organisez votre événement à La Mezza</h3>
       <p style="line-height:1.8;">
         Nous vous accompagnons dans l’organisation de vos événements :
         repas de famille, anniversaires, team building, séminaires, réunions,
@@ -502,12 +494,12 @@ footer{
         <div class="event-box">🎂 Anniversaires & repas de famille</div>
         <div class="event-box">💼 Team building & séminaires</div>
         <div class="event-box">🍽️ Traiteur libanais salé & sucré</div>
-        <div class="event-box">📍 Salle à la Croix-Rousse, Lyon 1</div>
+        <div class="event-box">📍 Salle au 19 rue Terme, Lyon 1</div>
       </div>
 
       <div class="buttons">
-        <a href="tel:0961223265" class="btn btn-gold">Demander un devis</a>
-        <a href="mailto:contact@chezmestar.com" class="btn btn-light">Envoyer un email</a>
+        <a href="tel:0783704499" class="btn btn-gold">Demander un devis</a>
+        <a href="mailto:lamezza69001@gmail.com" class="btn btn-light">Envoyer un email</a>
       </div>
     </div>
   </div>
@@ -526,23 +518,28 @@ footer{
   </div>
 </section>
 
-<section class="container cta" id="contact">
+<section class="container contact-box" id="contact">
   <h3 style="color:var(--gold);font-size:38px;">Réserver ou privatiser</h3>
   <p>Appelez-nous pour une réservation, un devis traiteur ou une demande de privatisation.</p>
+  <p><strong>Adresse :</strong> 19 rue Terme, 69001 Lyon</p>
+  <p><strong>Téléphone :</strong> 07 83 70 44 99</p>
+  <p><strong>Email :</strong> lamezza69001@gmail.com</p>
+
   <div class="buttons" style="justify-content:center;">
-    <a href="tel:0961223265" class="btn btn-gold">09 61 22 32 65</a>
-    <a href="https://maps.google.com/?q=152+Bd+de+la+Croix-Rousse,+69001+Lyon" target="_blank" class="btn btn-light">Itinéraire</a>
+    <a href="tel:0783704499" class="btn btn-gold">Appeler</a>
+    <a href="mailto:lamezza69001@gmail.com" class="btn btn-light">Email</a>
+    <a href="https://maps.google.com/?q=19+rue+Terme,+69001+Lyon" target="_blank" class="btn btn-light">Itinéraire</a>
   </div>
 </section>
 
 <footer>
-  © Chez Mestar — 152 Bd de la Croix-Rousse, 69001 Lyon
+  © La Mezza — 19 rue Terme, 69001 Lyon
 </footer>
 
 <div class="mobile-bar">
-  <a href="tel:0961223265">Appeler</a>
+  <a href="tel:0783704499">Appeler</a>
   <a href="#salle">Privatiser</a>
-  <a href="https://maps.google.com/?q=152+Bd+de+la+Croix-Rousse,+69001+Lyon" target="_blank">Itinéraire</a>
+  <a href="https://maps.google.com/?q=19+rue+Terme,+69001+Lyon" target="_blank">Itinéraire</a>
 </div>
 
 </body>
